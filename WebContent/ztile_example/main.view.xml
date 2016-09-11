@@ -1,0 +1,40 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tile="sap.suite.ui.commons"
+
+		controllerName="ztile_example.ztile_example.main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout">
+  <Page 
+  	id="navPage"
+    showHeader="true"
+    enableScrolling="false" 
+    showNavButton="true" 
+    navButtonPress="NavBack">
+   
+    <TileContainer
+      id="container"
+      tileDelete="handleTileDelete"
+      tiles="{/TileCollection}">
+      <StandardTile
+      	id="standardTile"
+        icon="{TileConfiguration/display_icon_url}"
+        title="{title}"
+        info="{TileConfiguration/display_subtitle_text}"
+        press="handleTilePress" />
+        <!--<tile:GenericTile header="{title}" size="M" frameType="OneByOne" press="handleTilePress">
+        <tile:tileContent>
+			<tile:TileContent size="M" footer="">
+				<content>
+					<NumericContent size="M" value="3" icon="{TileConfiguration/display_icon_url}"/>
+				</content>
+			</tile:TileContent>
+		</tile:tileContent>
+		</tile:GenericTile>-->
+    </TileContainer>
+    <footer>
+      <!--<Toolbar>
+        <ToolbarSpacer/>
+          <Button text="Edit" press="handleEditPress" />
+          <Button text="Busy state" press="handleBusyPress" />
+        <ToolbarSpacer/>
+      </Toolbar>-->
+    </footer>
+  </Page>                
+</core:View>
